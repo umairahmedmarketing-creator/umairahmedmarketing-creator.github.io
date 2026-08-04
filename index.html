@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Umair Ahmed — Senior Product Marketing Manager</title>
+<meta name="description" content="Umair Ahmed. Cybersecurity product marketer. GTM strategy, competitive intelligence, and sales enablement for technical security products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#E9EAE2;
+    --panel:#DEE0D5;
+    --line:#C4C7B9;
+    --ink:#20241F;
+    --muted:#5B6056;
+    --red:#8E332B;
+    --teal:#25514F;
+    --maxw:880px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Public Sans',system-ui,sans-serif;
+    line-height:1.55;
+  }
+  h1,h2,h3{margin:0; font-family:'Public Sans',sans-serif;}
+  a{color:inherit;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  ::selection{background:var(--ink); color:var(--paper);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--ink); outline-offset:3px;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+
+  /* top bar */
+  .topbar{position:sticky; top:0; z-index:20; background:var(--paper); border-bottom:1px solid var(--line);}
+  .topbar .wrap{display:flex; align-items:center; justify-content:space-between; height:52px;}
+  .brand{font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:0.03em; color:var(--muted);}
+  .brand strong{color:var(--ink);}
+  .nav{display:flex; gap:20px; font-family:'IBM Plex Mono',monospace; font-size:12.5px;}
+  .nav a{color:var(--muted); text-decoration:none;}
+  .nav a:hover{color:var(--ink); text-decoration:underline;}
+  @media (max-width:640px){ .nav{display:none;} }
+
+  /* hero */
+  .hero{padding:56px 0 40px;}
+  .hero-grid{display:grid; grid-template-columns:1fr 180px; gap:32px; align-items:start;}
+  @media (max-width:680px){ .hero-grid{grid-template-columns:1fr;} .headshot{order:-1; margin-bottom:8px;} }
+
+  .headshot{width:180px; height:220px; border:1px solid var(--line); background:var(--panel); overflow:hidden; flex-shrink:0; position:relative;}
+  .headshot img{width:100%; height:100%; object-fit:cover; display:block;}
+  .headshot-fallback{display:none; position:absolute; inset:0; align-items:center; justify-content:center; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--muted); padding:12px; line-height:1.5;}
+
+  .hero h1{font-size:clamp(34px,6vw,52px); font-weight:800; letter-spacing:-0.01em;}
+  .hero .role{margin-top:8px; font-size:clamp(15px,2vw,18px); color:var(--teal); font-weight:600;}
+  .hero .pitch{margin-top:18px; max-width:560px; font-size:16px; color:var(--muted);}
+  .hero .pitch strong{color:var(--ink);}
+
+  .contact-row{display:flex; flex-wrap:wrap; gap:16px; margin-top:22px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--muted);}
+  .contact-row a{text-decoration:underline; text-decoration-color:var(--line);}
+  .contact-row a:hover{color:var(--ink); text-decoration-color:var(--ink);}
+
+  .cta-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:26px;}
+  .btn{
+    font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600;
+    padding:11px 18px; text-decoration:none; border:1.5px solid var(--ink);
+  }
+  .btn-primary{background:var(--ink); color:var(--paper);}
+  .btn-primary:hover{background:var(--teal); border-color:var(--teal);}
+  .btn-ghost{color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink); color:var(--paper);}
+
+  .companies{margin-top:30px; padding-top:18px; border-top:1px solid var(--line); display:flex; flex-wrap:wrap; align-items:baseline; gap:14px;}
+  .companies-label{font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted);}
+  .company-name{font-family:'IBM Plex Mono',monospace; font-size:13.5px; font-weight:700; letter-spacing:0.02em; color:var(--ink);}
+
+  /* field report / metrics table */
+  .field-report{margin:36px 0 0; border:1px solid var(--line);}
+  .field-head{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--muted); padding:12px 20px; border-bottom:1px solid var(--line);
+    background:var(--panel);
+  }
+  .field-row{display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 20px; border-bottom:1px solid var(--line);}
+  .field-row:last-child{border-bottom:none;}
+  .field-row .fld-label{font-size:14.5px; color:var(--ink); max-width:72%;}
+  .field-row .fld-value{font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:16px; color:var(--red); white-space:nowrap;}
+
+  /* sections */
+  section.block{padding:64px 0;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--teal);}
+  .block h2{font-size:clamp(22px,3.4vw,28px); margin-top:8px; font-weight:800;}
+  .block .lede{color:var(--muted); margin-top:8px; max-width:560px; font-size:14.5px;}
+
+  /* about */
+  .about-body{margin-top:28px; max-width:620px; display:flex; flex-direction:column; gap:16px; font-size:15.5px; color:var(--ink);}
+  .about-body strong{color:var(--ink);}
+
+  /* timeline */
+  .timeline{margin-top:36px; display:flex; flex-direction:column; gap:28px;}
+  .entry{display:grid; grid-template-columns:150px 1fr; gap:22px;}
+  @media (max-width:640px){ .entry{grid-template-columns:1fr; gap:6px;} }
+  .entry .when{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); padding-top:2px;}
+  .entry .card{background:var(--panel); border:1px solid var(--line); padding:18px 20px;}
+  .entry .role-title{font-size:16.5px; font-weight:700; color:var(--ink);}
+  .entry .role-title span{color:var(--teal); font-weight:600;}
+  .entry ul{margin:12px 0 0; padding-left:18px; color:var(--muted); font-size:14px;}
+  .entry li{margin-bottom:7px;}
+  .entry li::marker{color:var(--red);}
+
+  /* selected work */
+  .work-list{margin-top:36px; display:flex; flex-direction:column; gap:20px;}
+  .work-card{border:1px solid var(--line); background:var(--panel); padding:22px 24px;}
+  .work-card h3{font-size:17px; font-weight:700;}
+  .work-card .work-role{margin-top:4px; font-size:12px; color:var(--muted);}
+  .work-card p{margin:12px 0 0; font-size:14.5px; color:var(--ink);}
+  .work-card .work-impact{color:var(--muted);}
+  .work-card .work-impact strong{color:var(--red); font-family:'IBM Plex Mono',monospace;}
+  .work-card a{color:var(--teal); text-decoration:underline; font-weight:600; font-family:'IBM Plex Mono',monospace; font-size:13.5px;}
+  .work-card a:hover{color:var(--red);}
+
+  /* capability matrix */
+  .matrix{margin-top:36px; display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  @media (max-width:680px){ .matrix{grid-template-columns:1fr;} }
+  .matrix-group{background:var(--paper); padding:18px 20px;}
+  .matrix-group h3{font-size:12px; font-family:'IBM Plex Mono',monospace; color:var(--muted); letter-spacing:0.06em; text-transform:uppercase; font-weight:600;}
+  .chip-row{display:flex; flex-wrap:wrap; gap:7px; margin-top:12px;}
+  .chip{font-size:12.5px; padding:5px 10px; border:1px solid var(--line); color:var(--ink);}
+
+  /* footer */
+  footer{border-top:1px solid var(--line); padding:56px 0 40px; background:var(--panel);}
+  footer h2{font-size:clamp(22px,4vw,30px); font-weight:800;}
+  footer .lede{color:var(--muted); margin-top:10px; max-width:500px; font-size:14.5px;}
+  .foot-links{display:flex; flex-wrap:wrap; gap:20px; margin-top:26px; font-family:'IBM Plex Mono',monospace; font-size:13px;}
+  .foot-links a{text-decoration:underline; text-decoration-color:var(--line); color:var(--ink);}
+  .foot-links a:hover{text-decoration-color:var(--ink);}
+  .fine{margin-top:36px; color:var(--muted); font-size:12px; font-family:'IBM Plex Mono',monospace;}
+
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand"><strong>UMAIR AHMED</strong> / candidate brief</div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#engage">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <h1>Umair Ahmed</h1>
+      <div class="role">Senior Product Marketing Manager, Cybersecurity &amp; Compliance</div>
+      <p class="pitch">
+        I've spent <strong>7+ years</strong> converting technical complexity into messaging that
+        resonates across buyers. I build the positioning, competitive intelligence, and sales
+        enablement that turn hard-to-explain security products into pipeline.
+      </p>
+
+      <div class="contact-row">
+        <a href="mailto:Umairahmed.marketing@gmail.com">Umairahmed.marketing@gmail.com</a>
+        <span>(226)-337-6337</span>
+        <a href="https://linkedin.com/in/umairahmed" target="_blank" rel="noopener">linkedin.com/in/umairahmed</a>
+        <span>Toronto, ON, Canada</span>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="UmairAhmed_Resume.pdf">Download résumé (PDF)</a>
+        <a class="btn btn-ghost" href="mailto:Umairahmed.marketing@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/umairahmed" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="headshot">
+      <img src="headshot.jpg" alt="Umair Ahmed"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="headshot-fallback">Add headshot.jpg to this folder</div>
+    </div>
+  </div>
+
+  <div class="companies">
+    <span class="companies-label">Experience across</span>
+    <span class="company-name">Acronis</span>
+    <span class="company-name">Vidyard</span>
+    <span class="company-name">Netsweeper</span>
+  </div>
+
+  <div class="field-report">
+    <div class="field-head">Key metrics on file</div>
+    <div class="field-row">
+      <div class="fld-label">Revenue attainment, XDR &amp; Security Awareness Training, post-launch</div>
+      <div class="fld-value">100%+</div>
+    </div>
+    <div class="field-row">
+      <div class="fld-label">Battlecards and talk tracks produced for the security portfolio</div>
+      <div class="fld-value">50+</div>
+    </div>
+    <div class="field-row">
+      <div class="fld-label">Email Security growth, first two quarters post-refresh</div>
+      <div class="fld-value">30%</div>
+    </div>
+    <div class="field-row">
+      <div class="fld-label">Minimum closed-won rate from the competitive intel program</div>
+      <div class="fld-value">20%</div>
+    </div>
+  </div>
+</header>
+
+<section class="block wrap" id="about">
+  <div class="eyebrow">01 / About</div>
+  <h2>A quick introduction</h2>
+  <div class="about-body">
+    <p>I'm a product marketer who ended up in cybersecurity almost by accident and stayed because the problem is genuinely interesting. Most security products are built by people who think in protocols and threat models, and sold to buyers who think in risk and budget. Someone has to translate between the two. That's the job I keep getting hired to do.</p>
+    <p>Over the past 7+ years I've done that translation at three very different companies: a telco and government security vendor, a PLG video platform, and now an enterprise cybersecurity company. Each one needed the same core thing: positioning, messaging, and competitive intelligence that holds up when a technical buyer pushes back. The buyers, the sales motion, and the stakes were different every time.</p>
+    <p>I've also gone deep on AI, not just as a talking point but as something I actually use. At work, I run AI agents and automated workflows to speed up content production, battlecards, competitive briefs, sales assets, without adding headcount. Outside of work, I build with Claude directly: this site, my resumes, and my cover letters were all put together working alongside it, prompt by prompt, rather than handed off wholesale. I'd rather understand a tool firsthand than just tell a team to adopt it.</p>
+    <p>I'm based in Toronto, and I'm currently looking at Senior PMM and GTM leadership roles in cybersecurity and technical B2B.</p>
+  </div>
+</section>
+
+<section class="block wrap" id="experience">
+  <div class="eyebrow">02 / Engagement history</div>
+  <h2>Where the work happened</h2>
+  <p class="lede">Three companies, three buyer types: telco and government, PLG SaaS, and
+    enterprise security. Same underlying job in each: translate the product into a story Sales can close.</p>
+
+  <div class="timeline">
+    <div class="entry">
+      <div class="when">Aug 2023 — Present</div>
+      <div class="card">
+        <div class="role-title">Senior Product Marketing Manager, Cybersecurity &amp; Compliance <span>· Acronis</span></div>
+        <ul>
+          <li>Drive global GTM strategy and execution for Email Security, Security Awareness Training, and XDR across MSP and mid-market segments.</li>
+          <li>Lead Tier 1-3 portfolio launches end-to-end: positioning, messaging, pricing, packaging, and cross-functional GTM plans.</li>
+          <li>Surpassed 100% of revenue targets for XDR and Security Awareness Training post-launch through focused enablement and competitive differentiation.</li>
+          <li>Lead org-wide competitive intelligence for the security portfolio, producing 50+ battlecards and talk tracks used directly by Sales.</li>
+          <li>Use AI agents and automated workflows to speed up content production, compressing cycle times and scaling PMM output without added headcount.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">Dec 2021 — Mar 2023</div>
+      <div class="card">
+        <div class="role-title">Product Marketing Manager <span>· Vidyard</span></div>
+        <ul>
+          <li>Developed and executed GTM plans for 3 product launches over 13 months, aligned to Vidyard's PLG motion.</li>
+          <li>Built and launched a competitive intelligence program with buy-in from Sales, Product, CS, and Pre-Sales, contributing to a minimum 20% closed-won rate every quarter.</li>
+          <li>Drove sales and CX readiness by translating feature complexity into clear value narratives.</li>
+          <li>Revamped homepage messaging through A/B testing, lifting overall website conversion rate by 15%.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">Jan 2020 — Aug 2021</div>
+      <div class="card">
+        <div class="role-title">Product Marketing Specialist <span>· Netsweeper</span></div>
+        <ul>
+          <li>Built the product marketing function from scratch: launch processes, sales enablement frameworks, and competitive intelligence, with no playbook to inherit.</li>
+          <li>Executed GTM strategy for telco and government buyers, aligning messaging to enterprise procurement cycles and compliance requirements.</li>
+          <li>Produced battlecards, whitepapers, and data sheets that equipped Sales to differentiate against global telco vendors.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block wrap" id="work">
+  <div class="eyebrow">03 / Selected work</div>
+  <h2>A closer look</h2>
+  <p class="lede">A few projects worth walking through in more detail.</p>
+
+  <div class="work-list">
+    <div class="work-card">
+      <h3>Acronis Compliance Navigator</h3>
+      <p class="work-role mono">Acronis · Led company-wide compliance positioning</p>
+      <p>Customers and prospects across regulated industries, healthcare, energy, manufacturing, financial services, government, kept asking the same question: how does Acronis actually help with our compliance obligations? I was tasked with building the company's compliance positioning from the ground up, and led a cross-functional team, developers, a growth marketer, designers, and content marketing, to build the Compliance Navigator: an interactive hub where prospects filter by industry, country, and framework to see requirements mapped to CIS Controls and Acronis products. I also worked directly with CIS (Center for Internet Security) to streamline how each framework maps to their controls, and partnered with Acronis Solutions Engineering and Product to validate how those controls map to real Acronis capabilities. I also built and ran the sales enablement behind the tool.</p>
+      <p class="work-impact"><strong>Live tool:</strong> Covers 11 major frameworks, including GDPR, NIS2, DORA, HIPAA, NIST 2.0, ISO/IEC 27001, Cyber Essentials, CAF, SMB 1001, DPDP Act, and Essential 8.</p>
+      <p><a href="https://www.acronis.com/en/compliance/" target="_blank" rel="noopener">View it live →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="block wrap" id="capabilities">
+  <div class="eyebrow">04 / Capability matrix</div>
+  <h2>What's in the toolkit</h2>
+  <p class="lede">Grouped by function, the way a security team would group controls, not alphabetically.</p>
+
+  <div class="matrix">
+    <div class="matrix-group">
+      <h3>GTM &amp; positioning</h3>
+      <div class="chip-row">
+        <span class="chip">Go-To-Market Strategy</span>
+        <span class="chip">Positioning &amp; Messaging</span>
+        <span class="chip">Messaging Frameworks</span>
+        <span class="chip">Product Launches</span>
+        <span class="chip">Pricing &amp; Packaging</span>
+      </div>
+    </div>
+    <div class="matrix-group">
+      <h3>Competitive &amp; threat intel</h3>
+      <div class="chip-row">
+        <span class="chip">Competitive Intelligence</span>
+        <span class="chip">MITRE ATT&amp;CK</span>
+        <span class="chip">Threat Landscape Analysis</span>
+        <span class="chip">Analyst Relations</span>
+        <span class="chip">Market Research</span>
+      </div>
+    </div>
+    <div class="matrix-group">
+      <h3>Enablement &amp; revenue</h3>
+      <div class="chip-row">
+        <span class="chip">Sales Enablement</span>
+        <span class="chip">Demand Generation</span>
+        <span class="chip">Partner Marketing</span>
+        <span class="chip">Customer Segmentation</span>
+      </div>
+    </div>
+    <div class="matrix-group">
+      <h3>Tools &amp; domain</h3>
+      <div class="chip-row">
+        <span class="chip">Cybersecurity</span>
+        <span class="chip">Salesforce</span>
+        <span class="chip">Gong</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="engage">
+  <div class="wrap">
+    <div class="eyebrow">05 / Contact</div>
+    <h2>Get in touch</h2>
+    <p class="lede">Open to Senior PMM and GTM leadership roles in cybersecurity and technical B2B.
+      Email or LinkedIn is the fastest way to reach me.</p>
+    <div class="foot-links">
+      <a href="mailto:Umairahmed.marketing@gmail.com">Umairahmed.marketing@gmail.com</a>
+      <a href="tel:+12263376337">(226)-337-6337</a>
+      <a href="https://linkedin.com/in/umairahmed" target="_blank" rel="noopener">linkedin.com/in/umairahmed</a>
+      <a href="UmairAhmed_Resume.pdf">Download résumé</a>
+    </div>
+    <div class="fine">Toronto, ON, Canada</div>
+  </div>
+</footer>
+
+</body>
+</html>
