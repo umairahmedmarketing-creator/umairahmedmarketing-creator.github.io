@@ -73,9 +73,12 @@
   .btn-ghost{color:var(--ink);}
   .btn-ghost:hover{background:var(--ink); color:var(--paper);}
 
-  .companies{margin-top:30px; padding-top:18px; border-top:1px solid var(--line); display:flex; flex-wrap:wrap; align-items:baseline; gap:14px;}
+  .companies{margin-top:30px; padding-top:18px; border-top:1px solid var(--line); display:flex; flex-wrap:wrap; align-items:center; gap:12px;}
   .companies-label{font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted);}
   .company-name{font-family:'IBM Plex Mono',monospace; font-size:13.5px; font-weight:700; letter-spacing:0.02em; color:var(--ink);}
+  .company-badge{display:inline-flex; align-items:center; background:var(--ink); border:1px solid var(--ink); padding:8px 14px; transition:opacity .15s;}
+  .company-badge:hover{opacity:0.82;}
+  .company-badge img{display:block; height:16px; width:auto;}
 
   /* sections */
   section.block{padding:64px 0;}
@@ -190,7 +193,9 @@
 
   <div class="companies">
     <span class="companies-label">Experience across</span>
-    <a class="company-name" href="https://www.vidyard.com" target="_blank" rel="noopener">Vidyard</a>    <a class="company-name" href="https://www.netsweeper.com" target="_blank" rel="noopener">Netsweeper</a> <a class="company-name" href="https://www.acronis.com" target="_blank" rel="noopener">Acronis</a>
+    <a class="company-badge" href="https://www.vidyard.com" target="_blank" rel="noopener"><img src="logos/vidyard.png" alt="Vidyard"></a>
+    <a class="company-badge" href="https://www.netsweeper.com" target="_blank" rel="noopener"><img src="logos/netsweeper.png" alt="Netsweeper"></a>
+    <a class="company-badge" href="https://www.acronis.com" target="_blank" rel="noopener"><img src="logos/acronis.svg" alt="Acronis"></a>
   </div>
 </header>
 
